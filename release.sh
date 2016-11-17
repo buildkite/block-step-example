@@ -5,9 +5,10 @@
 
 set -eu
 
-echo "--- :book: Processing release notes"
-
 RELEASE_NOTES=$(buildkite-agent meta-data get release-notes)
+RELEASE_TYPE=$(buildkite-agent meta-data get release-notes)
+
+echo "+++ :book: Processing release notes"
 
 echo
 echo "---"
@@ -16,5 +17,11 @@ echo "$RELEASE_NOTES"
 echo -e '\033[0m'
 echo "---"
 echo
+
+echo "+++ :boom: Bumping $RELEASE_TYPE version"
+
+echo "✅"
+
+echo "--- :pipeline: Uploading notify pipeline"
 
 ./generate-notify-pipeline.sh | buildkite-agent pipeline upload 
