@@ -1,5 +1,5 @@
 {
-  "name": "Dependent Pipeline Example",
+  "name": "Unblock Prompt Example",
   "steps": [
     {
       "type": "script",
