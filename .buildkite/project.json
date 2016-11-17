@@ -1,32 +1,10 @@
 {
   "name": "Dependent Pipeline Example",
-  "env": {
-    "TRIGGER_API_ACCESS_TOKEN": "change-me"
-  },
   "steps": [
     {
       "type": "script",
-      "name": ":runner: Non-blocking build",
-      "command": "non_blocking.sh",
-      "env": {
-        "TRIGGER_ORG_SLUG": "change-me",
-        "TRIGGER_PIPELINE_SLUG": "change-me",
-        "TRIGGER_COMMIT": "HEAD",
-        "TRIGGER_BRANCH": "master",
-        "TRIGGER_MESSAGE": "Oh hai :wave:"
-      }
-    },
-    {
-      "type": "script",
-      "name": ":raising_hand: Blocking build",
-      "command": "blocking.sh",
-      "env": {
-        "TRIGGER_ORG_SLUG": "change-me",
-        "TRIGGER_PIPELINE_SLUG": "change-me",
-        "TRIGGER_COMMIT": "HEAD",
-        "TRIGGER_BRANCH": "master",
-        "TRIGGER_MESSAGE": "Oh hai :wave:"
-      }
+      "name": ":pipeline:",
+      "command": "buildkite-agent pipeline upload"
     }
   ]
 }
