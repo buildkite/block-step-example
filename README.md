@@ -12,7 +12,7 @@ It includes:
 
 ## Screenshot
 
-<img src="screenshot.png" alt="Screenshot of a dependent pipeline build" width="975" height="533">
+<img src="screenshot.png" alt="Screenshot of a dependent pipeline build" />
 
 ## License
 
