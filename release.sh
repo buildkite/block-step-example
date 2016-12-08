@@ -10,7 +10,7 @@ RELEASE_TYPE=$(buildkite-agent meta-data get release-type)
 
 # The `release-notes` field is optional (required: false)
 # so we'll default it to "n/a" if a value doesn't exist
-RELEASE_NOTES=$(buildkite-agent meta-data get release-notes || "n/a")
+RELEASE_NOTES=$(buildkite-agent meta-data get release-notes || echo "n/a")
 
 echo "+++ :book: Processing release notes"
 
