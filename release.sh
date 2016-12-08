@@ -7,7 +7,7 @@ set -eu
 
 RELEASE_NAME=$(buildkite-agent meta-data get release-name)
 RELEASE_NOTES=$(buildkite-agent meta-data get release-notes)
-RELEASE_TYPE=$(buildkite-agent meta-data get release-notes)
+RELEASE_TYPE=$(buildkite-agent meta-data get release-type)
 
 echo "+++ :book: Processing release notes"
 
