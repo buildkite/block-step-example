@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# This fetches the data that was filled out in the previous block step and
-# outputs the values
+# This fetches the data that was filled out in the previous block
+# step and outputs the values
 
 set -eu
 
 RELEASE_NAME=$(buildkite-agent meta-data get release-name)
-RELEASE_NOTES=$(buildkite-agent meta-data get release-notes)
 RELEASE_TYPE=$(buildkite-agent meta-data get release-type)
+
+# The `release-notes` field is optional (required: false)
+# so we'll default it to "n/a" if a value doesn't exist
+RELEASE_NOTES=$(buildkite-agent meta-data get release-notes || "n/a")
 
 echo "+++ :book: Processing release notes"
 
