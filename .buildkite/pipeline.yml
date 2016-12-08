@@ -2,9 +2,12 @@ steps:
   - block: Release
     prompt: Fill out the details for release
     fields: 
-      - text: Release notes
+      - text: Name
+        key: release-name
+      - text: Notes
         key: release-notes
-      - select: Release type
+        required: false
+      - select: Type
         key: release-type
         default: Major
         options:
