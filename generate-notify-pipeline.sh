@@ -10,7 +10,7 @@ echo '  - block: "Notify"'
 echo '    fields:'
 echo '      - select: "Which team should be notified?"'
 echo '        key: "notify-team"'
-echo '        default: Ops'
+echo '        default: "Ops"'
 echo '        options:'
 
 # This list could be populated from anywhere! The file system, the Internet,
@@ -18,8 +18,8 @@ echo '        options:'
 TEAMS="All None Billing Engineering Ops QA Sales Support"
 
 for option in $TEAMS; do
-echo "          - $option"
+echo "          - "$option""
 done
 
-echo '  - command: notify.sh'
+echo '  - command: "notify.sh"'
 echo '    label: ":pager:"'
