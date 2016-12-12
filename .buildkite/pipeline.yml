@@ -5,6 +5,7 @@ steps:
         hint: "The code name for this release"
         key: "release-name"
       - select: "Type"
+        hint: "Which release stream does this belong in?"
         key: "release-type"
         default: "beta"
         options:
