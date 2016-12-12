@@ -4,5 +4,10 @@ steps:
       - text: "Name"
         hint: "The code name for this release"
         key: "release-name"
+        options:
+          - label: "Beta"
+            value: "beta"
+          - label: "Stable"
+            value: "stable"
   - command: release.sh
     label: ":rocket:"
