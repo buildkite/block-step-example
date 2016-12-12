@@ -1,5 +1,5 @@
 steps:
-  - block: ":padlock:"
+  - block: ":party_parrot:"
     prompt: "Request Release"
     submit: "Request Release"
     fields: 
