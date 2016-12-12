@@ -1,5 +1,6 @@
 steps:
-  - block: "Request Release"
+  - block: ":padlock:"
+    submit: "Request Release"
     fields: 
       - text: "Code Name"
         hint: "What’s the code name for this release? :name_badge:"
