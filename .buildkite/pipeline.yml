@@ -4,9 +4,9 @@ steps:
       - text: "Name"
         hint: "The code name for this release"
         key: "release-name"
-      - select: "Type"
+      - select: "Stream"
         hint: "Which release stream does this belong in?"
-        key: "release-type"
+        key: "release-stream"
         default: "beta"
         options:
           - label: "Beta"
