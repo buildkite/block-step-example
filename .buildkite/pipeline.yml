@@ -1,6 +1,6 @@
 steps:
-  - block: ":party_parrot:"
-    prompt: "Request Release"
+  - block: ":parrot:"
+    prompt: "Ok let’s do this release!"
     submit: "Request Release"
     fields: 
       - text: "Code Name"
