@@ -1,5 +1,6 @@
 steps:
   - block: ":padlock:"
+    prompt: "Request Release"
     submit: "Request Release"
     fields: 
       - text: "Code Name"
