@@ -6,6 +6,7 @@ steps:
         key: "release-name"
       - select: "Type"
         key: "release-type"
+        default: "beta"
         options:
           - label: "Beta"
             value: "beta"
