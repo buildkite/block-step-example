@@ -1,5 +1,5 @@
 {
-  "name": "Unblock Prompt Example",
+  "name": "Block Step Example",
   "steps": [
     {
       "type": "script",
