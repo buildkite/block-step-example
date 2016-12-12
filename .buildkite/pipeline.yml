@@ -13,9 +13,9 @@ steps:
         key: "release-type"
         default: "beta"
         options:
-        - label: "Stable"
-          value: "stable"
         - label: "Beta"
           value: "beta"
+        - label: "Stable"
+          value: "stable"
   - command: release.sh
     label: ":rocket:"
