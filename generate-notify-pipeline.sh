@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This dyamically generates a pipeline containing a click to unblock step with
+# This dynamically generates a pipeline containing a click to unblock step with
 # custom fields.
 
 set -eu
