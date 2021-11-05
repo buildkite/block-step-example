@@ -17,5 +17,6 @@ steps:
           value: "beta"
         - label: "Stable"
           value: "stable"
+    if: build.source != "schedule"
   - command: release.sh
     label: ":rocket:"
