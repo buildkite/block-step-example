@@ -2,3 +2,6 @@ steps:
   - command: echo "Testing Buildkite step key"
     label: ":rocket:"
     key: "This-is-a-key-from-the-first-step"
+    notify:
+      - github_commit_status:
+          context: "my-custom-status"
