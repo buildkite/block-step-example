@@ -14,6 +14,6 @@ It includes:
 
 <img src="screenshot.png" alt="Screenshot of a block step" />
 
-## License
+## Licenses
 
 See [Licence.md](Licence.md) (MIT)
