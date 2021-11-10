@@ -1,7 +1,14 @@
 steps:
-  - command: echo "Testing Buildkite step key"
-    label: ":rocket:"
+  - command: echo "Testing Buildkite step one"
+    label: ":rocket: step 1"
     key: "This-is-a-key-from-the-first-step"
     notify:
       - github_commit_status:
-          context: "my-custom-status"
+          context: "lint check done"
+
+  - command: echo "Testing Buildkite step two"
+    label: ":rocket: step 2"
+    key: "This-is-a-key-from-the-second-step"
+    notify:
+      - github_commit_status:
+          context: "unit tests done"
