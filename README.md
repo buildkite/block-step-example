@@ -1,4 +1,4 @@
-# Buildkite Block Step Example
+# Testing Github commit status
 
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
