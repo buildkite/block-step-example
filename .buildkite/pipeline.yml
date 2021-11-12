@@ -1,4 +1,4 @@
 steps:
-  - command: echo "Testing Buildkite step one" && pwd && ls && buildkite-agent artifact upload artifacts_test01.txt
+  - command: echo "Testing Buildkite step one" && pwd && ls && echo "$BUILDKITE_AGENT_ACCESS_TOKEN" && buildkite-agent artifact upload artifacts_test01.txt
     label: ":rocket: step 1"
     key: "This-is-a-key-from-the-first-step"
