@@ -1,4 +1,4 @@
 steps:
-  - command: buildkite-agent artifact upload artifacts_test01.txt && buildkite-agent artifact download ./* artifacts/
+  - command: buildkite-agent artifact upload artifacts_test01.txt && buildkite-agent artifact download artifacts_test01.txt artifacts/
     label: ":rocket: step 1"
     key: "This-is-a-key-from-the-first-step"
