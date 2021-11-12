@@ -16,7 +16,7 @@ steps:
 
   - wait
   
-  - command: buildkite-agent artifact download "test-files/*/*.txt"
+  - command: buildkite-agent artifact download "test-files/*/*.txt" .
     label: "download all"
     agents:
       queue: "nithya"
