@@ -1,12 +1,23 @@
 steps:
   - command: buildkite-agent artifact upload test-files/step1/test.txt
     label: ":rocket: step 1"
+    agents:
+      queue: "nithya"
 
   - command: buildkite-agent artifact upload test-files/step2/test.txt
     label: ":rocket: step 2"
+    agents:
+      queue: "nithya"
 
   - command: buildkite-agent artifact upload test-files/step3/test.txt
     label: ":rocket: step 3"
+    agents:
+      queue: "nithya"
 
+  - wait
+  
   - command: buildkite-agent artifact download "test-files/*/*.txt"
     label: "download all"
+    agents:
+      queue: "nithya"
+
