@@ -1,10 +1,10 @@
 steps:
-  - command: buildkite-agent artifact upload test-files/step1/test.txt && buildkite-agent annotate "<pre class="term"><code><div class='blue'>Hello <span class='orange'>world</span> in blue</div></code></pre>"
+  - command: buildkite-agent artifact upload test-files/step1/test.txt && buildkite-agent annotate "<pre class="term"><code><div class='blue'>Hello <span class='orange'>world</span> in blue on console</div></code></pre>"
     label: ":rocket: step 1"
     agents:
       queue: "nithya"
 
-  - command: buildkite-agent artifact upload test-files/step1/test.txt && buildkite-agent annotate "<div class='green'> Hello world in green but <span class='yellow'>this part is yellow</span></div>"
+  - command: buildkite-agent artifact upload test-files/step1/test.txt && buildkite-agent annotate "<div class='blue'>Hello <span class='orange'>world</span> in blue - no console</div>"
     label: ":rocket: step 2"
     agents:
       queue: "nithya"
