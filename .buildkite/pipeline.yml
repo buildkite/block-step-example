@@ -1,8 +1,8 @@
 steps:
-  - command: buildkite-agent artifact upload test-files/step1/test.txt
+  - command: buildkite-agent artifact upload test-files/step1/test.txt && buildkite-agent annotate "<div class='blue'>Hello world in blue</div>"
     label: ":rocket: step 1"
     agents:
-      queue: "nithya"
+      queue: "nithya
 
   - command: buildkite-agent artifact upload test-files/step1/test.txt
     label: ":rocket: step 2"
