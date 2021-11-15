@@ -6,9 +6,13 @@ steps:
   
   - wait: ~
   
+  - command: echo "first command"
+  
   - wait: ~
       
   - block: "this is block step"
+  
+  - command: echo "second command"
 
   - wait: ~
     continue_on_failure: true
