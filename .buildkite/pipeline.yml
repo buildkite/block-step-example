@@ -18,7 +18,6 @@ steps:
     continue_on_failure: true
     
   - wait: ~
-    continue_on_failure: true
     
   - command: echo "Hello, release me"
 
