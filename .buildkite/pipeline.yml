@@ -6,6 +6,7 @@ steps:
       
   - wait: ~
     continue_on_failure: true
+    
   - block: "Hello, release me"
 
   - command: echo 'hello'
