@@ -4,7 +4,7 @@ steps:
     agents:
       queue: "nithya"
       
-  - wait: 
+  - wait
 
   - block: ":warning: Build a release?"
 
