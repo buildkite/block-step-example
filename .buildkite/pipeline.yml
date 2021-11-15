@@ -5,9 +5,6 @@ steps:
       queue: "nithya"
       
   - wait: 
-    continue_on_failure: true
-    
-  - command: echo "Hieeeeee"
 
   - block: ":warning: Build a release?"
 
