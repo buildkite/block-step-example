@@ -6,7 +6,5 @@ steps:
       
   - wait:
 
-  - block: ":warning: Build a release?"
-
   - command: echo 'hello'
     label: "I am unblocked"
