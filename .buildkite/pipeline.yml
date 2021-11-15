@@ -1,33 +1,9 @@
 steps:
-  - command: echo 'Hello Buildkite'
+  - command: ech 'Hello Buildkite'
     label: ":rocket: step 1"
     agents:
       queue: "nithya"
-  
-  - wait: ~
-  
-  - command: echo "first command"
-  
-  - wait: ~
       
   - block: "this is block step"
   
   - command: echo "second command"
-
-  - wait: ~
-    continue_on_failure: true
-    
-  - wait: ~
-    
-  - command: echo "Hello, release me"
-  
-  - block: "another block step"
-  
-  - block: "one more block step"
-  
-  - block: "and there is this final one"
-
-  - command: echo 'hello'
-    label: "I am unblocked"
-    agents:
-      queue: "nithya"
