@@ -4,7 +4,7 @@ steps:
     agents:
       queue: "nithya"
       
-  - wait: ~
+  - wait: \~
     continue_on_failure: true
     
   - block: "Hello, release me"
