@@ -3,6 +3,8 @@ steps:
     label: ":rocket: step 1"
     agents:
       queue: "nithya"
+    soft_fail:
+      - exit_status: "*"
       
   - block: "this is block step"
   
