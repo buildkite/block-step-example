@@ -7,7 +7,7 @@ steps:
   - wait: "wait 1"
     continue_on_failure: true
   
-  - wait: "wait 2"
+  - block: "this is block step"
     
   - command: echo "Hello, release me"
 
