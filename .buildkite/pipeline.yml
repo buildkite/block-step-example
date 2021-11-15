@@ -1,23 +1,13 @@
 steps:
-  - command: buildkite-agent artifact upload test-files/step1/test.txt && buildkite-agent annotate "<div class='blue'>Hello <span class='orange'>world</span> in blue - no console</div>"
+  - command: echo 'Hello Buildkite'
     label: ":rocket: step 1"
     agents:
       queue: "nithya"
+      
+  - wait: 
+    continue_on_failure: true
 
-  - command: buildkite-agent artifact upload test-files/step1/test.txt
-    label: ":rocket: step 2"
-    agents:
-      queue: "nithya"
+  - block: ":warning: Build a release?"
 
-  - command: buildkite-agent artifact upload test-files/step1/test.txt
-    label: ":rocket: step 3"
-    agents:
-      queue: "nithya"
-
-  - wait
-  
-  - command: buildkite-agent artifact download "test-files/*/*.txt" .
-    label: "download all"
-    agents:
-      queue: "nithya"
-
+  - command: echo 'hello'
+    label: "I am unblocked"
