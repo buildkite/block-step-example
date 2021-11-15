@@ -3,11 +3,11 @@ steps:
     label: ":rocket: step 1"
     agents:
       queue: "nithya"
+      
+  - block: "this is block step"
 
   - wait: "wait 1"
     continue_on_failure: true
-  
-  - block: "this is block step"
     
   - command: echo "Hello, release me"
 
