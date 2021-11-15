@@ -4,7 +4,7 @@ steps:
     agents:
       queue: "nithya"
       
-  - wait: ~
+  - wait
 
   - command: echo 'hello'
     label: "I am unblocked"
