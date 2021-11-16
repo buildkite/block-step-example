@@ -1,0 +1,9 @@
+steps:
+  - command: echo "Before trigger"
+  
+  - label: Deploy
+    trigger: block-step-example
+    build:
+      branch: master
+      message: trigger test
+  - command: echo "END"
