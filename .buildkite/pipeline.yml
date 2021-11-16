@@ -6,6 +6,6 @@ steps:
     soft_fail:
       - exit_status: "*"
       
-  - block: "this is block step"
+  #- block: "this is block step"
   
   - command: echo "second command"
