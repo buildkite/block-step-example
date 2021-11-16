@@ -1,9 +1,9 @@
 steps:
   - command: echo "Before trigger"
+  - block: "unblock me"
   - label: Deploy
     trigger: block-step-example
     build:
       branch: master
       message: trigger test
-  - block: "unblock me"
   - command: echo "END"
