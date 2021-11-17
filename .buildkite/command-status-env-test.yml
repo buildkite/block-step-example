@@ -1,5 +1,7 @@
 steps:
   - command: echo "Before trigger"
   - wait
+  - command: echo "${BUILDKITE_COMMAND_EXIT_STATUS}"
+    labe: "env test"
   - block: "previous result was: ${BUILDKITE_COMMAND_EXIT_STATUS}"
   - command: echo "END"
