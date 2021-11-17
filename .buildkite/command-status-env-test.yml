@@ -3,5 +3,5 @@ steps:
   - wait
   - command: echo "${build.env("BUILDKITE_COMMAND_EXIT_STATUS")}"
     label: "env test"
-  - block: "previous result was: ${BUILDKITE_COMMAND_EXIT_STATUS}"
+  - block: "previous result was: ${build.env('BUILDKITE_COMMAND_EXIT_STATUS')"
   - command: echo "END"
