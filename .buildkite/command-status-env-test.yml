@@ -1,4 +1,5 @@
 steps:
   - command: echo "Before trigger"
+  - wait
   - block: "previous result was: ${BUILDKITE_COMMAND_EXIT_STATUS}"
   - command: echo "END"
