@@ -3,6 +3,7 @@ steps:
     command: "false"
     key: 'one'
   - label: "notify testing"
+    command: echo "this should notify the user email"
     notify:
       - email: "nithya@buildkite.com"
         if: $(buildkite-agent step get "outcome" --step "one") == "hard_failed"
