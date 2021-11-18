@@ -2,14 +2,13 @@ steps:
   - label: 'Step 1'
     command: "false"
     key: 'one'
-  - label: "notify testing"
-    command: echo "this should notify the user email"
-    notify:
-      - email: "nithya@buildkite.com"
-        if: $(buildkite-agent step get "outcome" --step "one") == "hard_failed"
 
   - wait:
     continue_on_failure: true
 
   - label: 'Step 3'
     command: 'echo `buildkite-agent step get "outcome" --step "one"`'
+    
+notify:
+  - email: "nithya@buildkite.com"
+    if: $(buildkite-agent step get "outcome" --step "one") == "hard_failed"
