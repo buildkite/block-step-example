@@ -1,20 +1,16 @@
 steps:
-  - label: 'Step 1'
-    command: "false"
-    key: 'one'
-
-  - wait:
+  - key: one
+    label: Step 1
+    command: 'false'
+  - wait: 
     continue_on_failure: true
-
-  - label: 'Check if step 1 was failed'
+  - label: Check if step 1 was failed
     command: |
-      if [ $$(buildkite-agent step get "outcome" --step "one") == "hard_failed" ]; then
+      if [ $(buildkite-agent step get "outcome" --step "one") == "hard_failed" ]; then
         buildkite-agent meta-data set "step-one-result" "fail"
       fi
-      
   - label: 'Step 1 result was:'
     command: echo 'buildkite-agent meta-data get "step-one-result"'
-  
-  - label: 'Step 3'
-    block: 'This is blocked'
-    if: true
+  - if: false
+    block: This is blocked
+    label: Step 3
