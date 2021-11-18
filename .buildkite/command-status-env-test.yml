@@ -7,10 +7,10 @@ steps:
   - label: Check if step 1 was failed
     command: |
       if [ $(buildkite-agent step get "outcome" --step "one") == "hard_failed" ]; then
-        buildkite-agent meta-data set "step-one-result" "fail"
+        buildkite-agent meta-data set "steponeresult" "fail"
       fi
   - label: 'Step 1 result was:'
-    command: buildkite-agent meta-data get "step-one-result"
-  - if: meta-data("step-one-result") == "fail"
+    command: buildkite-agent meta-data get "steponeresult"
+  - if: meta-data("steponeresult") == "fail"
     block: This is blocked
     label: Step 3
