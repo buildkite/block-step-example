@@ -11,4 +11,4 @@ steps:
     
 notify:
   - email: "dev@acmeinc.com"
-    if: build.state == "passed"
+    if: `buildkite-agent step get "outcome" --step "one"` == "hard_failed"
