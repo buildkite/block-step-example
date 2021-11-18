@@ -11,6 +11,6 @@ steps:
       fi
   - label: 'Step 1 result was:'
     command: buildkite-agent meta-data get "steponeresult"
-  - if: meta-data("steponeresult") == "fail"
+  - if: (meta-data("steponeresult") == "fail")
     block: This is blocked
     label: Step 3
