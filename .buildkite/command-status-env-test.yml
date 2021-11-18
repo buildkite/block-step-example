@@ -10,5 +10,5 @@ steps:
     command: 'echo `buildkite-agent step get "outcome" --step "one"`'
     
 notify:
-  - email: "nithya@buildkite.com"
-    if: $(buildkite-agent step get "outcome" --step "one") == "hard_failed"
+  - email: "dev@acmeinc.com"
+    if: build.state == "passed"
