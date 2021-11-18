@@ -6,9 +6,7 @@ steps:
   - wait:
     continue_on_failure: true
 
+  - block: "Block step here"
+    if: $$(buildkite-agent step get "outcome" --step "one") == "hard_failed"
   - label: 'Step 3'
     command: 'echo `buildkite-agent step get "outcome" --step "one"`'
-    
-notify:
-  - email: "dev@acmeinc.com"
-    if: ${buildkite-agent step get "outcome" --step "one"} == "hard_failed"
