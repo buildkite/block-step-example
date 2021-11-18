@@ -10,7 +10,7 @@ steps:
         buildkite-agent meta-data set "step-one-result" "fail"
       fi
   - label: 'Step 1 result was:'
-    command: echo 'buildkite-agent meta-data get "step-one-result"'
+    command: buildkite-agent meta-data get "step-one-result"
   - if: false
     block: This is blocked
     label: Step 3
