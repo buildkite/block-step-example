@@ -13,7 +13,7 @@ steps:
       fi
       
   - label: 'Step 1 result was:'
-    command: echo $(buildkite-agent meta-data get "step-one-result")
+    command: buildkite-agent meta-data get "step-one-result" --default helloWorld
   
   - label: 'Step 3'
     block: 'This is blocked'
