@@ -1,4 +1,4 @@
 steps:
   - command: echo "Before trigger"
-  - if: build.env("BUILDKITE_COMMAND_EXIT_STATUS") != 0
-    block: 'previous result was: ${build.env(''BUILDKITE_COMMAND_EXIT_STATUS'')}'
+  - block: "previous result was: ${build.env('BUILDKITE_COMMAND_EXIT_STATUS')}"
+    if: build.env("BUILDKITE_COMMAND_EXIT_STATUS") != 0
