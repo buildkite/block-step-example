@@ -1,16 +1,4 @@
 steps:
-  - key: one
-    label: Step 1
-    command: 'false'
-  - wait: 
-    continue_on_failure: true
-  - label: Check if step 1 was failed
-    command: |
-      if [ $(buildkite-agent step get "outcome" --step "one") == "hard_failed" ]; then
-        buildkite-agent meta-data set "steponeresult" "fail"
-      fi
-  - label: 'Step 1 result was:'
-    command: buildkite-agent meta-data get "steponeresult"
-  - if: (meta-data("steponeresult") == "fail")
-    block: This is blocked
-    label: Step 3
+  - command: echo "Before trigger"
+  - if: build.env("BUILDKITE_COMMAND_EXIT_STATUS") != 0
+    block: 'previous result was: ${build.env(''BUILDKITE_COMMAND_EXIT_STATUS'')}'
