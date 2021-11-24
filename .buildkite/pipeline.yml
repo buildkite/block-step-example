@@ -1,5 +1,5 @@
 steps:
-  - command: ech 'Hello Buildkite'
+  - command: echo 'Hello Buildkite'
     label: ":rocket: step 1"
     agents:
       queue: "nithya"
