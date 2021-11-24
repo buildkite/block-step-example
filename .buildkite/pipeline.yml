@@ -1,11 +1,10 @@
+env:
+  agents:
+    queue: "nithya"
 steps:
   - command: echo 'Hello Buildkite'
     label: ":rocket: step 1"
-    agents:
-      queue: "nithya"
     soft_fail:
       - exit_status: "*"
-      
-  #- block: "this is block step"
   
   - command: echo "second command"
