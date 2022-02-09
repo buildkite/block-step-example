@@ -8,3 +8,4 @@ steps:
       - exit_status: "*"
   
   - command: echo "second command"
+  - "trigger"
