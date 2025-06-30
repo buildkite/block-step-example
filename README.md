@@ -1,6 +1,6 @@
 # Buildkite Block Step Example
 
-[![Build status](https://badge.buildkite.com/block-step-example.svg?branch=main)](https://buildkite.com/buildkite/block-step-example)
+[![Build status](https://badge.buildkite.com/2590219e4a5ac465234b4e7b4bfc95cd0c481025d5acf6021c.svg)](https://buildkite.com/buildkite/block-step-example)
 [![Add to Buildkite](https://img.shields.io/badge/Add%20to%20Buildkite-14CC80)](https://buildkite.com/new)
 
 This repository is an example [Buildkite](https://buildkite.com/) pipeline that demonstrates how to use a [Block Step](https://buildkite.com/docs/pipelines/block-step-example) to pause a build and prompt for manual input.
