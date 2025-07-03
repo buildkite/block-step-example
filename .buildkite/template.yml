@@ -1,5 +1,9 @@
 name: "Block Step Pipeline Example"
-description: "An example repository you can use as a test project with Buildkite"
+description: "An example pipeline that demonstrates how to use a block step to pause a build for manual input."
+emoji: ":stop_sign:"
+color: "gray-100"
+languages:
+  - "Shell"
 steps:
-  - command: "buildkite-agent pipeline upload"
-    label: ":pipeline:"
+  - label: ":pipeline:"
+    command: "buildkite-agent pipeline upload"
