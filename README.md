@@ -37,7 +37,7 @@ See the full [Getting Started Guide](https://buildkite.com/docs/guides/getting-s
 <p align="left"><em>The pipeline completes, and the release script logs all submitted input values</em></p>
 
 ---
-
+<!-- docs:start -->
 ## How it works
 
 This example:
@@ -45,6 +45,7 @@ This example:
 - Includes a [`release.sh`](release.sh) script that reads values entered during the block step.
 - Dynamically generates prompt fields using [`generate-notify-pipeline.sh`](generate-notify-pipeline.sh).
 
+<!-- docs:end -->
 ---
 
 ## License
