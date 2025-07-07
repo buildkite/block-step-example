@@ -3,6 +3,7 @@ description: "An example pipeline that demonstrates how to use a block step to p
 emoji: ":raised_hand:"
 languages:
   - "Shell"
+  - "YAML"
 steps:
   - label: ":pipeline:"
     command: "buildkite-agent pipeline upload"
