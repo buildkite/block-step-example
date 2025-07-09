@@ -50,4 +50,4 @@ This example:
 
 ## License
 
-See [LICENSE](LICENSE) (MIT)
+See [LICENSE](LICENSE.md) (MIT)
